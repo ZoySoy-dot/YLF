@@ -1,0 +1,177 @@
+
+<style>
+  .stats-wrapper { padding: 2rem 0 1rem; }
+  .intro-block {
+    text-align: center;
+    margin-bottom: 2rem;
+    max-width: 640px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .intro-block h2 {
+    font-size: 18px;
+    font-weight: 500;
+    color: var(--color-text-primary);
+    margin: 0 0 8px;
+  }
+  .intro-block p {
+    font-size: 14px;
+    color: var(--color-text-secondary);
+    line-height: 1.6;
+    margin: 0;
+  }
+  .intro-tag {
+    display: inline-block;
+    font-size: 11px;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.07em;
+    color: #1D9E75;
+    background: #E1F5EE;
+    padding: 4px 10px;
+    border-radius: 20px;
+    margin-bottom: 12px;
+  }
+  .stats-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 16px;
+    margin-bottom: 16px;
+  }
+  .stats-row2 {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 16px;
+    max-width: 66%;
+    margin: 0 auto 1.5rem;
+  }
+  .stat-card {
+    background: var(--color-background-primary);
+    border: 0.5px solid var(--color-border-tertiary);
+    border-radius: var(--border-radius-lg);
+    padding: 1.5rem 1.25rem;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    position: relative;
+    overflow: hidden;
+  }
+  .stat-card::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0;
+    height: 3px;
+  }
+  .stat-card.green::before { background: #1D9E75; }
+  .stat-card.blue::before { background: #378ADD; }
+  .stat-card.amber::before { background: #BA7517; }
+  .stat-card.teal::before { background: #0F6E56; }
+  .stat-card.purple::before { background: #7F77DD; }
+  .stat-number {
+    font-size: 28px;
+    font-weight: 500;
+    line-height: 1;
+  }
+  .stat-number.green { color: #1D9E75; }
+  .stat-number.blue { color: #378ADD; }
+  .stat-number.amber { color: #BA7517; }
+  .stat-number.teal { color: #0F6E56; }
+  .stat-number.purple { color: #7F77DD; }
+  .stat-secondary {
+    font-size: 12px;
+    font-weight: 500;
+    color: var(--color-text-secondary);
+    padding: 3px 8px;
+    background: var(--color-background-secondary);
+    border-radius: var(--border-radius-md);
+    display: inline-block;
+    width: fit-content;
+  }
+  .stat-label {
+    font-size: 11px;
+    font-weight: 500;
+    color: var(--color-text-secondary);
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+  }
+  .stat-context {
+    font-size: 11px;
+    font-weight: 500;
+    color: var(--color-text-secondary);
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    opacity: 0.7;
+  }
+  .stat-desc {
+    font-size: 13px;
+    color: var(--color-text-secondary);
+    line-height: 1.5;
+    margin-top: 2px;
+  }
+  .section-label {
+    text-align: center;
+    font-size: 11px;
+    font-weight: 500;
+    color: var(--color-text-secondary);
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    margin-bottom: 1.25rem;
+  }
+  .currency-note {
+    text-align: center;
+    font-size: 12px;
+    color: var(--color-text-secondary);
+    padding-bottom: 0.5rem;
+    line-height: 1.6;
+  }
+</style>
+
+<div class="stats-wrapper">
+
+  <div class="intro-block">
+    <span class="intro-tag">Case Study — Manila, Philippines</span>
+    <h2>De La Salle University (DLSU)</h2>
+    <p>De La Salle University is a private research university located in Manila, Philippines, serving over 20,000 students across a dense, multi-building urban campus. As a large mixed-use academic institution operating year-round in a tropical climate with high cooling demands, it represents the exact conditions where ghost consumption and unmanaged energy waste become a severe and compounding financial burden.</p>
+  </div>
+
+  <p class="section-label">The financial case, by the numbers</p>
+
+  <div class="stats-grid">
+    <div class="stat-card green">
+      <span class="stat-label">Annual electricity expenditure</span>
+      <span class="stat-number green">$2.79M USD</span>
+      <span class="stat-secondary">₱160.9 Million</span>
+      <span class="stat-desc">De La Salle University's estimated annual electricity cost based on historical consumption data from the DLSU Sustainability Report. This establishes the financial baseline the Digital Twin system is designed to reduce.</span>
+    </div>
+    <div class="stat-card amber">
+      <span class="stat-label">Energy wasted globally</span>
+      <span class="stat-number amber">30%</span>
+      <span class="stat-secondary">Industry-wide average</span>
+      <span class="stat-desc">The average share of energy wasted by commercial and institutional buildings worldwide due to unmanaged occupancy inefficiencies, according to the U.S. Environmental Protection Agency. This figure applies universally — not just in the Philippines.</span>
+    </div>
+    <div class="stat-card blue">
+      <span class="stat-label">Projected annual savings</span>
+      <span class="stat-number blue">$418K USD</span>
+      <span class="stat-secondary">₱24.1 Million</span>
+      <span class="stat-desc">Estimated yearly savings achievable at a conservative 15% reduction in consumption. Funds recovered can be redirected toward academic programs, research, and campus development instead of wasted electricity.</span>
+    </div>
+  </div>
+
+  <div class="stats-row2">
+    <div class="stat-card teal">
+      <span class="stat-label">Return on investment per room</span>
+      <span class="stat-number teal">&lt; 2 Months</span>
+      <span class="stat-secondary">~$11 USD per sensor node</span>
+      <span class="stat-desc">Each smart node — consisting of a microcontroller, motion sensor, and temperature sensor — costs approximately ₱650 or $11 USD to deploy. At this price point, the system pays for itself within two billing cycles, making it viable for universities in both developing and developed economies.</span>
+    </div>
+    <div class="stat-card purple">
+      <span class="stat-label">Monthly cost reduction</span>
+      <span class="stat-number purple">Up to 20%</span>
+      <span class="stat-secondary">Per billing cycle</span>
+      <span class="stat-desc">Projected reduction in monthly electricity costs when occupancy-driven automated control replaces manual or schedule-based energy management. Applicable to any institution operating similar mixed-use spaces.</span>
+    </div>
+  </div>
+
+  <p class="currency-note">USD figures based on ₱57.65 = $1 USD exchange rate. Philippine Peso (₱) figures reflect original source data from the DLSU Sustainability Report (2019–2021).</p>
+
+</div>
